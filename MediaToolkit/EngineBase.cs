@@ -38,7 +38,7 @@ namespace MediaToolkit
         throw new ArgumentException(nameof(ffMpegPath));
 
       FfmpegFilePath = ffMpegPath;
-      var ffmpegDirectoryPath = _fileSystem.FileInfo.FromFileName(ffMpegPath).DirectoryName;
+      var ffmpegDirectoryPath = _fileSystem.FileInfo.New(ffMpegPath).DirectoryName;
       FfprobeFilePath = _fileSystem.Path.Combine(ffmpegDirectoryPath, "ffprobe.exe");
 
       EnsureFFmpegFileExists();
