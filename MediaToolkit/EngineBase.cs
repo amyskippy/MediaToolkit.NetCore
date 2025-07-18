@@ -14,8 +14,6 @@ namespace MediaToolkit
     /// <summary>   Used for locking the FFmpeg process to one thread. </summary>
     private const string LockName = "MediaToolkit.Engine.LockName";
 
-    private readonly string _ffprobeFilePath;
-
     private readonly IFileSystem _fileSystem;
 
     /// <summary>   The Mutex. </summary>
